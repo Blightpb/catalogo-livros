@@ -1,0 +1,259 @@
+
+.aplicacao {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px;
+  background: #e6eee7;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.subtitulo {
+  color: #416958;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.cabecalho h1 {
+  font-size: 36px;
+  margin: 8px 0;
+}
+
+.cabecalho h1 span {
+  color: #416958;
+}
+
+.cabecalho p:last-child {
+  color: #5d6c62;
+}
+
+.icone-cabecalho {
+  font-size: 55px;
+}
+
+.controles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.controles input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d9dfd9;
+  border-radius: 10px;
+  background: white;
+  color: #263b30;
+  outline: none;
+}
+
+.controles input:focus {
+  border-color: #416958;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filtros button {
+  padding: 10px 18px;
+  border: 1px solid #d9dfd9;
+  border-radius: 20px;
+  background: white;
+  color: #416958;
+  cursor: pointer;
+}
+
+.filtros button.ativo {
+  background: #416958;
+  color: white;
+}
+
+.titulo-secao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.titulo-secao h2 {
+  margin: 0;
+}
+
+.titulo-secao span {
+  color: #66756b;
+  font-size: 14px;
+}
+
+.lista-livros {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.livro-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e4e9e4;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px #1d35200b;
+}
+
+.livro-capa {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  background: #e6eee7;
+}
+
+.livro-icone {
+  font-size: 55px;
+}
+
+.botao-favorito {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #b64d5c;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.livro-info {
+  padding: 20px;
+}
+
+.genero {
+  color: #416958;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.livro-info h2 {
+  font-size: 19px;
+  line-height: 1.4;
+  min-height: 54px;
+}
+
+.autor {
+  color: #68746b;
+  font-size: 14px;
+}
+
+.disponibilidade {
+  margin-top: 18px;
+  font-size: 13px;
+}
+
+.disponivel {
+  color: #2c7951;
+}
+
+.indisponivel {
+  color: #b14c4c;
+}
+
+.botao-detalhes {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #416958;
+  color: white;
+  cursor: pointer;
+}
+
+.botao-detalhes:hover {
+  background: #2e4e3d;
+}
+
+.mensagem-vazia {
+  padding: 30px;
+  border-radius: 12px;
+  background: #f0f3f0;
+  color: #536258;
+  text-align: center;
+}
+
+.modal-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #15251dcc;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  border-radius: 18px;
+  background: white;
+  text-align: center;
+}
+
+.modal h2 {
+  color: #416958;
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .lista-livros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .aplicacao {
+    padding: 20px 14px;
+  }
+
+  .cabecalho {
+    padding: 24px 18px;
+  }
+
+  .cabecalho h1 {
+    font-size: 27px;
+  }
+
+  .icone-cabecalho {
+    font-size: 38px;
+  }
+
+  .lista-livros {
+    grid-template-columns: 1fr;
+  }
+}
